@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <!--Razor Code for Title-->
+    <title>@ViewData["Title"]</title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--Browser Tab Icon-->
+    <link rel="shortcut icon" href="img/favicon.ico"
+          type="image/x-icon">
+    <!--CSS Style Sheet-->
+    <link href="css/myStyle.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+        <a asp-controller="SubView" asp-action="Index">Home</a>
+        <a asp-controller="SubView" asp-action="GradeCalculator">Grade Calculator</a>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <!--Adding in Bootstrap, JQuery, and the Grade Calculator JS File-->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    
+
+</body>
+
+</html>
